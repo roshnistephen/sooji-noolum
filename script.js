@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const navUl = document.querySelector('nav ul');
     
     if (hamburger) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function(event) {
+            event.stopPropagation();
             hamburger.classList.toggle('active');
             navUl.classList.toggle('active');
         });
@@ -20,7 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
-            if (!event.target.closest('nav')) {
+            const isClickInsideNav = navUl.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && navUl.classList.contains('active')) {
                 hamburger.classList.remove('active');
                 navUl.classList.remove('active');
             }
