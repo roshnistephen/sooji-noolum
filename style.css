@@ -552,12 +552,12 @@ nav ul li a:not(.btn):focus::after {
     align-items: start;
 }
 
-.founder-image {
-    height: 450px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-    box-shadow: var(--shadow);
-}
+.founder-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* optional */
+  }
+  
 
 .founder-text h2 {
     font-size: 38px;
