@@ -21,4 +21,4 @@ Disallow: /.DS_Store
 Disallow: /generate-manifest.js
 
 # Sitemap location
-Sitemap: https://roshnistephen.github.io/sooji-noolum/sitemap.xml
+Sitemap: https://soojinoolum.lokaai.in/sitemap.xml
